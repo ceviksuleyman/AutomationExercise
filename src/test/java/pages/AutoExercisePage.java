@@ -174,4 +174,10 @@ public class AutoExercisePage {
     @FindBy(css = ".btn.btn-default.check_out")
     public WebElement downloadInvoice;
 
+    @FindBy(css = "#address_delivery>li")
+    public List<WebElement> deliveryAdress;
+
+    @FindBy(css = "#address_invoice>li")
+    public List<WebElement> billingAdress;
+
 }

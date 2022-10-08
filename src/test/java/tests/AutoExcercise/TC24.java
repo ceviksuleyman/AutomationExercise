@@ -203,5 +203,7 @@ public class TC24 {
 
         //22. 'HESAP SİLİNDİ!' seçeneğini doğrulayın. ve 'Devam' düğmesini tıklayın
         Assert.assertTrue(page.deleted.isDisplayed());
+
+        Driver.closeDriver();
     }
 }
