@@ -112,8 +112,9 @@ public class AutoExercisePage {
     @FindBy(css = ".title.text-center")
     public WebElement searchedProducts;
 
+    //.productinfo.text-center>p
     @FindBy(xpath = "//*[@class='productinfo text-center']/p")
-    public WebElement searchedProductNames;
+    public List<WebElement> searchedProductNames;
 
     @FindBy(xpath = "//*[.='New User Signup!']")
     public WebElement newUserSignup;
@@ -308,6 +309,9 @@ public class AutoExercisePage {
     public WebElement productCondition;
     @FindBy(xpath = "(//*[@class='product-information']//p)[4]")
     public WebElement productBrand;
+
+    @FindBy(css = "input#search_product")
+    public WebElement searchProduct;
 
 
 
