@@ -38,7 +38,8 @@ public class TC12 {
 
         //5. İlk ürünün üzerine gelin ve 'Sepete ekle'yi tıklayın
 
-        ReusableMethod.jsScroll(page.firstProduct);
+        //ReusableMethod.jsScroll(page.firstProduct);
+        //ReusableMethod.waitFor(2);
         ReusableMethod.getActions().moveToElement(page.firstProduct).perform();
         page.firstProductAddToCart.click();
 
@@ -50,6 +51,8 @@ public class TC12 {
 
         //7. Fareyi ikinci ürünün üzerine getirin ve 'Sepete ekle'yi tıklayın
 
+        //ReusableMethod.jsScroll(page.firstProduct);
+        //ReusableMethod.waitFor(2);
         ReusableMethod.getActions().moveToElement(page.secondProduct).perform();
         page.secondProductAddToCart.click();
 
@@ -77,5 +80,8 @@ public class TC12 {
                 && page.secondProductPrice.isDisplayed()
                 && page.secondProductQuantity.isDisplayed()
                 && page.secondProductTotalPrice.isDisplayed());
+
+
+        Driver.closeDriver();
     }
 }

@@ -236,4 +236,24 @@ public class AutoExercisePage {
 
     @FindBy(xpath = "//tbody//tr[1]/td[5]")
     public WebElement firstProductTotalPrice;
+
+
+    //Write Your Review
+    @FindBy(css = ".category-tab.shop-details-tab")
+    public WebElement writeYourReview;
+
+    @FindBy(css = "#name" )
+    public WebElement writeYourReviewNameBox;
+
+    @FindBy(css = "#email")
+    public WebElement writeYourReviewEmailBox;
+
+    @FindBy(css = "textarea#review")
+    public WebElement addReviewHereBox;
+
+    @FindBy(css = "#button-review")
+    public WebElement submitReview;
+
+    @FindBy(xpath = "//*[text()='Thank you for your review.']")
+    public WebElement thankYouReview;
 }
