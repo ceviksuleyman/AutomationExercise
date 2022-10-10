@@ -256,4 +256,60 @@ public class AutoExercisePage {
 
     @FindBy(xpath = "//*[text()='Thank you for your review.']")
     public WebElement thankYouReview;
+
+    //contact us
+    @FindBy(xpath = "//*[@href='/contact_us']")
+    public WebElement contactUsButton;
+
+    @FindBy(xpath = "//*[text()='Get In Touch']")
+    public WebElement getInTouch;
+
+    @FindBy(css = "input[data-qa=name]")
+    public WebElement contactUsNameBox;
+
+    @FindBy(css = "input[data-qa=email]")
+    public WebElement contactUsEmailBox;
+
+    @FindBy(css = "input[data-qa=subject]")
+    public WebElement contactUsSubjectBox;
+
+    @FindBy(css = "textarea[id=message]")
+    public WebElement contactUsMessageBox;
+
+    @FindBy(css = "input[name=upload_file]")
+    public WebElement uploadFile;
+
+    @FindBy(css = ".pull-left.submit_form")
+    public WebElement contactUsSubmit;
+
+    @FindBy(css = ".status.alert.alert-success")
+    public WebElement submittedSuccessfullyMessage;
+
+    @FindBy(css = ".btn.btn-success")
+    public WebElement returnHomePage;
+
+    @FindBy(css = ".product-information")
+    public WebElement productInformation;
+
+    @FindBy(css = ".product-information")
+    public List<WebElement> productInformationList;
+
+    //Product Details
+    @FindBy(css = ".product-information>h2")
+    public WebElement productName;
+    @FindBy(xpath = "//div//span//span")
+    public WebElement productPrice;
+
+    @FindBy(xpath = "(//*[@class='product-information']//p)[1]")
+    public WebElement productCategory;
+    @FindBy(xpath = "(//*[@class='product-information']//p)[2]")
+    public WebElement productAvailability;
+    @FindBy(xpath = "(//*[@class='product-information']//p)[3]")
+    public WebElement productCondition;
+    @FindBy(xpath = "(//*[@class='product-information']//p)[4]")
+    public WebElement productBrand;
+
+
+
+
 }
