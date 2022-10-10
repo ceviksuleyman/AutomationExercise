@@ -18,7 +18,7 @@ public class AutoExercisePage {
     public WebElement homePage;
 
     @FindBy(css = ".nav.navbar-nav>:nth-child(4)")
-    public WebElement loginAndSignIn;
+    public WebElement loginAndSignup;
 
     @FindBy(css = ".login-form")
     public WebElement loginPage;
@@ -180,4 +180,60 @@ public class AutoExercisePage {
     @FindBy(css = "#address_invoice>li")
     public List<WebElement> billingAdress;
 
+    @FindBy(css = "a>.fa.fa-plus-square")
+    public List<WebElement> viewProductList;
+
+    @FindBy(css = ".col-sm-9.padding-right")
+    public WebElement productDetails;
+
+    @FindBy(css = "#quantity")
+    public WebElement productQuantity;
+
+    @FindBy(css = ".btn.btn-default.cart")
+    public WebElement addToCartPrdctDtls;
+
+    @FindBy(css = "#cart_info_table>tbody>tr>td:nth-child(4)")
+    public WebElement quantityInCart;
+
+    @FindBy(css = "#cart_info_table")
+    public WebElement cartDetails;
+
+    //urun listesi .features_items>.col-sm-4>:nth-of-type(1)
+    // .features_items>.col-sm-4>:first-of-type
+
+    //@FindBy(css = "(//*[@class='col-sm-4'])[2]")
+    //public WebElement firstProduct;
+    @FindBy(xpath = "(//*[@class='product-overlay'])[1]")
+    public WebElement firstProduct;
+
+    @FindBy(xpath = "(//div[@class='overlay-content']//a)[1]")
+    public WebElement firstProductAddToCart;
+
+    @FindBy(css = ".btn.btn-success.close-modal")
+    public WebElement continueShopping;
+
+    @FindBy(xpath = "(//*[@class='product-overlay'])[2]")
+    public WebElement secondProduct;
+
+    @FindBy(xpath = "(//div[@class='overlay-content']//a)[2]")
+    public WebElement secondProductAddToCart;
+
+
+    @FindBy(xpath = "//tbody//tr[1]/td[3]")
+    public WebElement firstProductPrice;
+
+    @FindBy(xpath = "//tbody//tr[2]/td[3]")
+    public WebElement secondProductPrice;
+
+    @FindBy(xpath = "//tbody//tr[2]/td[4]")
+    public WebElement secondProductQuantity;
+
+    @FindBy(xpath = "//tbody//tr[1]/td[4]")
+    public WebElement firstProductQuantity;
+
+    @FindBy(xpath = "//tbody//tr[2]/td[5]")
+    public WebElement secondProductTotalPrice;
+
+    @FindBy(xpath = "//tbody//tr[1]/td[5]")
+    public WebElement firstProductTotalPrice;
 }

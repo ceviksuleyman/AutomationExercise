@@ -52,7 +52,7 @@ public class TC23 {
 
 
         //4. 'Kayıt Ol / Giriş Yap' düğmesini tıklayın
-        ReusableMethod.jsScrollClick(page.loginAndSignIn);
+        ReusableMethod.jsScrollClick(page.loginAndSignup);
 
 
         //5. Kayıt bölümündeki tüm ayrıntıları doldurun ve hesap oluşturun

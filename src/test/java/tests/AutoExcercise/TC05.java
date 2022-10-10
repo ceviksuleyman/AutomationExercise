@@ -32,7 +32,7 @@ public class TC05 {
         ReusableMethod.getSoftAssert().assertTrue(page.homePage.isDisplayed(), "Anasayfa goruntulenemedi");
 
         //'Kayıt Ol / Giriş Yap' düğmesine tıklayın
-        page.loginAndSignIn.click();
+        page.loginAndSignup.click();
 
         //'Yeni Kullanıcı Kaydı'nı doğrulayın! görünür
         Assert.assertTrue(page.newUserSignup.isDisplayed());

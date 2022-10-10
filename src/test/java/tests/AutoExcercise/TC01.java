@@ -49,7 +49,7 @@ public class TC01 extends TestBaseRapor {
         extentTest.info("Anasayfa goruntulendi");
 
 
-        ReusableMethod.jsScrollClick(page.loginAndSignIn);
+        ReusableMethod.jsScrollClick(page.loginAndSignup);
         extentTest.info("Kayit ol/ giris yap butonuna tiklandi");
 
 
