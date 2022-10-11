@@ -18,13 +18,16 @@ public class TC19 {
     //7. Sol taraftaki çubukta başka bir marka bağlantısına tıklayın
     //8. Kullanıcının o marka sayfasına gittiğini ve ürünleri görebildiğini doğrulayın
 
-    AutoExercisePage page = new AutoExercisePage();
+    AutoExercisePage page;
 
     @Test
     public void testCase19() {
 
+        page = new AutoExercisePage();
+
         //2. 'http://automationexercise.com' url'sine gidin
         Driver.getDriver().get(ConfigReader.getProperty("exerciseUrl"));
+
 
         //3. 'Ürünler' düğmesine tıklayın
         page.productsButton.click();
@@ -49,5 +52,8 @@ public class TC19 {
 
         //8. Kullanıcının o marka sayfasına gittiğini ve ürünleri görebildiğini doğrulayın
         Assert.assertTrue(page.brandProductPage.isDisplayed());
+
+
+        Driver.closeDriver();
     }
 }

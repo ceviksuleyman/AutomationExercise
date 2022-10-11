@@ -7,6 +7,7 @@ import pages.AutoExercisePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethod;
+import utilities.TestBaseCross;
 
 public class TC18 {
     //1. Tarayıcıyı başlatın
@@ -18,13 +19,16 @@ public class TC18 {
     //7. Sol taraftaki çubukta, 'Erkekler' kategorisinin herhangi bir alt kategori bağlantısına tıklayın
     //8. Kullanıcının o kategori sayfasına yönlendirildiğini doğrulayın
 
-    AutoExercisePage page = new AutoExercisePage();
+    AutoExercisePage page;
 
     @Test
     public void testCase18() {
 
+        page = new AutoExercisePage();
+
         //2. 'http://automationexercise.com' url'sine gidin
         Driver.getDriver().get(ConfigReader.getProperty("exerciseUrl"));
+
 
         //3. Sol taraftaki çubukta kategorilerin görünür olduğunu doğrulayın
         Assert.assertTrue(page.category.isDisplayed());
@@ -50,5 +54,7 @@ public class TC18 {
         //8. Kullanıcının o kategori sayfasına yönlendirildiğini doğrulayın
         Assert.assertTrue(page.menProducts.isDisplayed());
 
+
+        Driver.closeDriver();
     }
 }
