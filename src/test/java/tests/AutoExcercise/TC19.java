@@ -6,6 +6,7 @@ import pages.AutoExercisePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethod;
+import utilities.TestBaseCross;
 
 public class TC19 {
     //1. Tarayıcıyı başlatın
@@ -24,6 +25,7 @@ public class TC19 {
 
         //2. 'http://automationexercise.com' url'sine gidin
         Driver.getDriver().get(ConfigReader.getProperty("exerciseUrl"));
+
         //3. 'Ürünler' düğmesine tıklayın
         page.productsButton.click();
 

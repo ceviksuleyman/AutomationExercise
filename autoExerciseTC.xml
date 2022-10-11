@@ -2,7 +2,7 @@
 <suite name="Automation Exercise">
     <test name="TC Class">
         <classes>
-            <class name="tests.AutoExcercise.TC23"/>
+            <class name="tests.AutoExcercise.TC19"/>
         </classes>
     </test>
 </suite>

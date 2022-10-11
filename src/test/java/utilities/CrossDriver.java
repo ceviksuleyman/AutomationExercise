@@ -23,7 +23,7 @@ public class CrossDriver {
     public static WebDriver getDriver(String browser) {  // Webdriver getDriver method
 
         // Olur da browser null gelirse browser bos gecmesin diye emniyet !
-        browser = (browser == null)? ConfigReader.getProperty("browser") : browser;
+        browser = (browser == null) ? ConfigReader.getProperty("browser") : browser;
 
         if (driver == null) {
 
@@ -32,7 +32,6 @@ public class CrossDriver {
                 crossBrowser icin bizim gonderdigimiz browser uzerinden calismasi icin
                 buraya parametre olarak girdigimiz degeri yazdik.
                  */
-
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();

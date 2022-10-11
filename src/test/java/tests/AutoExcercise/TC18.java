@@ -50,7 +50,5 @@ public class TC18 {
         //8. Kullanıcının o kategori sayfasına yönlendirildiğini doğrulayın
         Assert.assertTrue(page.menProducts.isDisplayed());
 
-        ReusableMethod.waitFor(2);
-        Driver.closeDriver();
     }
 }
