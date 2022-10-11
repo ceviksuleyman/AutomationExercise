@@ -4,15 +4,14 @@
     <test name="Cross Browser chrome">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="tests.AutoExcercise.TC19"/>
+            <class name="tests.AutoExcercise.TC04"/>
         </classes>
     </test>
 
     <test name="Cross Browser edge">
         <parameter name="browser" value="edge"/>
         <classes>
-            <class name="tests.AutoExcercise.TC18"/>
+            <class name="tests.AutoExcercise.TC03"/>
         </classes>
     </test>
-
 </suite>

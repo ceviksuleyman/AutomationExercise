@@ -5,6 +5,7 @@ import pages.AutoExercisePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethod;
+import utilities.TestBaseCross;
 
 public class TC03 {
     /*
