@@ -1,10 +1,12 @@
 package utilities;
 
 import com.github.javafaker.Faker;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
@@ -50,6 +52,7 @@ public class ReusableMethod {
         } catch (Exception e) {
             js.executeScript("arguments[0].scrollIntoView(true);", webElement);
             js.executeScript("arguments[0].click()", webElement);
+            waitFor(1);
         }
     }
 
@@ -82,6 +85,7 @@ public class ReusableMethod {
     static String tarih1, tarih2;
 
     public static String dateMonth() {
+
         LocalDateTime date = LocalDateTime.now();
         formater1 = DateTimeFormatter.ofPattern("MM");
 
@@ -94,5 +98,23 @@ public class ReusableMethod {
         formater2 = DateTimeFormatter.ofPattern("yyyy");
 
         return tarih2 = date.format(formater2);
+    }
+
+    public static void toBeClickableWait(WebElement webElement) {
+
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
+        wait.until(ExpectedConditions.elementToBeClickable(webElement));
+    }
+
+    public static void visibilityOfWait(WebElement webElement){
+
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),Duration.ofSeconds(15));
+        wait.until(ExpectedConditions.visibilityOf(webElement));
+    }
+
+    public static void visibilityOfElementLocatedWait(By located){
+
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),Duration.ofSeconds(15));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(located));
     }
 }//

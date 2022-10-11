@@ -199,6 +199,12 @@ public class AutoExercisePage {
     @FindBy(css = "#cart_info_table")
     public WebElement cartDetails;
 
+    @FindBy(css = "#cart_info_table>tbody>tr")
+    public List<WebElement> cartDetailsList;
+
+    @FindBy(xpath = "//*[text()='Cart is empty!']")
+    public WebElement cartIsEmpty;
+
     //urun listesi .features_items>.col-sm-4>:nth-of-type(1)
     // .features_items>.col-sm-4>:first-of-type
 
@@ -219,6 +225,8 @@ public class AutoExercisePage {
     @FindBy(xpath = "(//div[@class='overlay-content']//a)[2]")
     public WebElement secondProductAddToCart;
 
+    @FindBy(css = ".fa.fa-times")
+    public WebElement productRemove;
 
     @FindBy(xpath = "//tbody//tr[1]/td[3]")
     public WebElement firstProductPrice;
@@ -243,7 +251,7 @@ public class AutoExercisePage {
     @FindBy(css = ".category-tab.shop-details-tab")
     public WebElement writeYourReview;
 
-    @FindBy(css = "#name" )
+    @FindBy(css = "#name")
     public WebElement writeYourReviewNameBox;
 
     @FindBy(css = "#email")
@@ -313,7 +321,35 @@ public class AutoExercisePage {
     @FindBy(css = "input#search_product")
     public WebElement searchProduct;
 
+    //category
+    @FindBy(css = "div[id=accordian]")
+    public WebElement category;
 
+    @FindBy(css = "#accordian>:nth-child(1)")
+    public WebElement womenCategory;
 
+    @FindBy(css = "#accordian>:nth-child(2)")
+    public WebElement menCategory;
 
+    @FindBy(css = "#Women>div>ul>li>a")
+    public List<WebElement> womenCategoryList;
+
+    @FindBy(css = "#Men>div>ul>li>a")
+    public List<WebElement> menCategoryList;
+
+    @FindBy(css = ".features_items")
+    public WebElement womenProducts;
+
+    @FindBy(css = ".features_items")
+    public WebElement menProducts;
+
+    //brands
+    @FindBy(xpath = "//*[text()='Brands']")
+    public WebElement brands;
+
+    @FindBy(css = ".brands-name>ul>li>a")
+    public List<WebElement> brandNamesList;
+
+    @FindBy(css = ".features_items")
+    public WebElement brandProductPage;
 }
