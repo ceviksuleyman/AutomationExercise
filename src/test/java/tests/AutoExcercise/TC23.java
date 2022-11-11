@@ -197,6 +197,7 @@ public class TC23 {
 
         //15. 'HESAP SİLİNDİ!' seçeneğini doğrulayın. ve 'Devam' düğmesini tıklayın
 
+        ReusableMethod.getSoftAssert().assertAll();
         ReusableMethod.waitFor(3);
         Driver.closeDriver();
 
