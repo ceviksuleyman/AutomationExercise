@@ -17,42 +17,33 @@ import java.util.List;
 
 public class ReusableMethods {
 
-    //========ScreenShot(Sayfanın resmini alma)=====//
     public static String getScreenshot(String name) throws IOException {
 
-        // yinelemeyi önlemek için ekran görüntüsünü geçerli tarihle adlandırma
         String date = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
 
-        // TakesScreenshot is an interface of selenium that takes the screenshot
         TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
         File source = ts.getScreenshotAs(OutputType.FILE);
 
-        //ekran görüntüsü konumunun tam yolu
         String target = System.getProperty("user.dir") + "/target/Screenshots/" + name + date + ".png";
         File finalDestination = new File(target);
 
-        //ekran görüntüsünü verilen yola kaydedin
         FileUtils.copyFile(source, finalDestination);
         return target;
     }//
 
-    //========ScreenShot Web Element(Bir webelementin resmini alma)=====//
+
     public static String getScreenshotWebElement(String name, WebElement element) throws IOException {
         String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 
-        // TakesScreenshot, ekran görüntüsünü alan bir selenyum arayüzüdür.
         File source = element.getScreenshotAs(OutputType.FILE);
 
-        // ekran görüntüsü konumunun tam yolu
         String wElementSS = System.getProperty("user.dir") + "/target/WElementScreenshots/" + name + date + ".png";
         File finalDestination = new File(wElementSS);
 
-        // ekran görüntüsünü verilen yola kaydedin
         FileUtils.copyFile(source, finalDestination);
         return wElementSS;
     }//
 
-    //========Switching Window(Pencereler arası geçiş)=====//
     public static void switchToWindow(String targetTitle) {
 
         String origin = Driver.getDriver().getWindowHandle();
@@ -75,7 +66,7 @@ public class ReusableMethods {
 
     }//
 
-    //==========Return a list of string given a list of Web Element====////
+    //Return a list of string given a list of Web Element
     public static List<String> getElementsText(List<WebElement> list) {
         List<String> elemTexts = new ArrayList<>();
         for (WebElement el : list) {
@@ -86,7 +77,7 @@ public class ReusableMethods {
         return elemTexts;
     }//
 
-    //========Returns the Text of the element given an element locator==//
+    //Returns the Text of the element given an element locator==//
     public static List<String> getElementsText(By locator) {
 
         List<WebElement> elems = Driver.getDriver().findElements(locator);

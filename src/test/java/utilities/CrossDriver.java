@@ -1,6 +1,6 @@
 package utilities;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -33,24 +33,24 @@ public class CrossDriver {
                 buraya parametre olarak girdigimiz degeri yazdik.
                  */
                 case "chrome":
-                    WebDriverManager.chromedriver().setup();
+
                     driver = new ChromeDriver();
                     break;
                 case "edge":
-                    WebDriverManager.edgedriver().setup();
+
                     driver = new EdgeDriver();
                     break;
                 case "firefox":
-                    WebDriverManager.firefoxdriver().setup();
+
                     driver = new FirefoxDriver();
                     break;
                 case "safari":
-                    WebDriverManager.safaridriver().setup();
+
                     driver = new SafariDriver();
                     break;
                 default:
                     // headless-chrome
-                    WebDriverManager.chromedriver().setup();
+
                     driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
 
             }//switch
